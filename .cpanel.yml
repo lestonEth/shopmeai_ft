@@ -1,3 +1,5 @@
+---
 deployment:
-  branch: main
-  documentroot: public_html
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp -R images $DEPLOYPATH
