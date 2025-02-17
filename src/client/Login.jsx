@@ -16,7 +16,7 @@ export default function Login() {
         setMessage('');
 
         try {
-            const response = await axios.post("http://localhost:3001/login", {
+            const response = await axios.post("https://shopmeai-bc.onrender.com/login", {
                 email,
                 password,
             });

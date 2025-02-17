@@ -5,8 +5,8 @@ import MessageInput from "./MessageInput";
 import io from 'socket.io-client';
 
 // Connect to the backend socket
-const server = "http://localhost:3001";
-const socket = io('http://localhost:3001'); // Adjust to your server's URL
+const server = "https://shopmeai-bc.onrender.com";
+const socket = io('https://shopmeai-bc.onrender.com'); // Adjust to your server's URL
 
 export default function ChatWindow({ activeUser }) {
     const [messages, setMessages] = useState([]);
@@ -91,7 +91,7 @@ export default function ChatWindow({ activeUser }) {
             formData.append("file", file);
     
             // Send the file to the server first
-            fetch("http://localhost:3001/upload", {
+            fetch("https://shopmeai-bc.onrender.com/upload", {
                 method: "POST",
                 body: formData,
             })

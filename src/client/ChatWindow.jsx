@@ -4,7 +4,7 @@ import MessageInput from "./MessageInput";
 import ShopMeai from "../assets/spmeai.png";
 import io from "socket.io-client";
 
-const server = "http://localhost:3001";
+const server = "https://shopmeai-bc.onrender.com";
 const socket = io(server);
 console.log(socket);
 
@@ -63,7 +63,7 @@ export default function ChatWindow({ activeUser, setAmount, setShowModal }) {
             formData.append("file", file);
     
             // Send the file to the server first
-            fetch("http://localhost:3001/upload", {
+            fetch("https://shopmeai-bc.onrender.com", {
                 method: "POST",
                 body: formData,
             })

@@ -14,7 +14,7 @@ export default function Sidebar({ activeUser, setActiveUser }) {
         // Fetch chat users from backend API
         const fetchChatUsers = async () => {
             try {
-                const response = await fetch("http://localhost:3001/chat-users"); // Replace with your actual backend URL
+                const response = await fetch("https://shopmeai-bc.onrender.com/chat-users"); // Replace with your actual backend URL
                 const data = await response.json();
                 setChatUsers(data);
             } catch (error) {

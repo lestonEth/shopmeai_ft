@@ -25,7 +25,7 @@ export default function Register() {
         setMessage('');
         
         try {
-            const response = await axios.post("http://localhost:3001/register", {
+            const response = await axios.post("https://shopmeai-bc.onrender.com/register", {
                 username,
                 email,
                 password,
