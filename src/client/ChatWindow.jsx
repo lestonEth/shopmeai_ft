@@ -5,8 +5,7 @@ import ShopMeai from "../assets/spmeai.png";
 import io from "socket.io-client";
 
 const server = "https://shopmeai-bc.onrender.com";
-const socket = io(server);
-console.log(socket);
+const socket = io("https://shopmeai-bc.onrender.com");
 
 export default function ChatWindow({ activeUser, setAmount, setShowModal }) {
     const [messages, setMessages] = useState([]);

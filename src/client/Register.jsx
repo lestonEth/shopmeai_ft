@@ -34,14 +34,15 @@ export default function Register() {
             // Show success message and store token if needed
             setMessage('User registered successfully!');
             setMessageType('success');
-            const token = response.data.token;
-            console.log(token);
-            localStorage.setItem('token', token);
+            setTimeout(() => {
+                window.location.href = '/login';  // Redirect to login page
+            }, 1000);
         } catch (error) {
             // Check for specific error messages from backend response
             const errorMessage = error.response?.data?.message || 'Registration failed. Try again.';
             setMessage(errorMessage);
             setMessageType('error');
+
         } finally {
             setLoading(false);  // Hide loading indicator
         }

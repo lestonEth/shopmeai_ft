@@ -179,12 +179,11 @@ export default function ChatWindow({ activeUser }) {
                         )}
                     </div>
                 ))}
-{/* 
                 {isTyping && activeUser !== "admin" && (
                     <div className="text-gray-500 italic">
                         {activeUser} is typing...
                     </div>
-                )} */}
+                )}
                 {/* Add a ref at the bottom of the messages list */}
                 <div ref={messagesEndRef} />
             </div>
